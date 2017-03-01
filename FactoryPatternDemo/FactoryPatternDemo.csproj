@@ -43,6 +43,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractFactory\Ingredients\Contretes\ChicagoPizzaIngredientFactory.cs" />
+    <Compile Include="AbstractFactory\Ingredients\Contretes\FreshClams.cs" />
+    <Compile Include="AbstractFactory\Ingredients\Contretes\FrozenClams.cs" />
+    <Compile Include="AbstractFactory\Ingredients\Contretes\MarinaraSauce.cs" />
+    <Compile Include="AbstractFactory\Ingredients\Contretes\MozzarellaCheese.cs" />
+    <Compile Include="AbstractFactory\Ingredients\Contretes\NYPizzaIngredientFactory.cs" />
+    <Compile Include="AbstractFactory\Ingredients\Contretes\PlumTomatoSauce.cs" />
+    <Compile Include="AbstractFactory\Ingredients\Contretes\ReggiznoCheese.cs" />
+    <Compile Include="AbstractFactory\Ingredients\Contretes\SlicedPepperoni.cs" />
+    <Compile Include="AbstractFactory\Ingredients\Contretes\ThickCrustDough.cs" />
+    <Compile Include="AbstractFactory\Ingredients\Contretes\ThinCrustDough.cs" />
+    <Compile Include="AbstractFactory\Ingredients\Interfaces\IClams.cs" />
+    <Compile Include="AbstractFactory\Ingredients\Interfaces\IDough.cs" />
+    <Compile Include="AbstractFactory\Ingredients\Interfaces\IPepperoni.cs" />
+    <Compile Include="AbstractFactory\Ingredients\Interfaces\IPizzaIngredientFactory.cs" />
+    <Compile Include="AbstractFactory\Ingredients\Interfaces\ICheese.cs" />
+    <Compile Include="AbstractFactory\Ingredients\Interfaces\ISauce.cs" />
+    <Compile Include="AbstractFactory\Products\CheesePizza.cs" />
+    <Compile Include="AbstractFactory\Products\ClamPizza.cs" />
+    <Compile Include="AbstractFactory\Products\PizzaFromAF.cs" />
+    <Compile Include="AbstractFactory\Stores\NYPizzaStoreFromAF.cs" />
+    <Compile Include="AbstractFactory\Stores\PizzaStoreFromAF.cs" />
     <Compile Include="Factory\Stores\ChicagoPizzaStore.cs" />
     <Compile Include="Factory\Stores\NYPizzaStore.cs" />
     <Compile Include="Factory\Stores\PizzaStore.cs" />
@@ -61,6 +83,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

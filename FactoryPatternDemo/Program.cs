@@ -1,4 +1,6 @@
-﻿using FactoryPatternDemo.Products;
+﻿using FactoryPatternDemo.AbstractFactory.Products;
+using FactoryPatternDemo.AbstractFactory.Stores;
+using FactoryPatternDemo.Products;
 using FactoryPatternDemo.SimpleFactory.Store;
 using FactoryPatternDemo.SimpleFactory.Stores;
 using FactoryPatternDemo.Stores;
@@ -29,14 +31,33 @@ namespace FactoryPatternDemo
 
             Console.WriteLine("-----------------------------------\n");
 
-            SimplePizzaFactory simpleFactory = new SimplePizzaFactory();
+            //SimplePizzaFactory simpleFactory = new SimplePizzaFactory();
 
-            SimplePizzaStore simpleStore = new SimplePizzaStore(simpleFactory);
+            //SimplePizzaStore simpleStore = new SimplePizzaStore(simpleFactory);
+
+            //pizza = simpleStore.OrderPizza("Cheese");
+
+
+            //Console.WriteLine("Martin ordered a " + pizza.Name + "\n");
+
+            Console.WriteLine("SimpleFactory Use static\n");
+
+            SimplePizzaStore simpleStore = new SimplePizzaStore();
 
             pizza = simpleStore.OrderPizza("Cheese");
-
-
             Console.WriteLine("Martin ordered a " + pizza.Name + "\n");
+
+
+            Console.WriteLine("------------------------------------\n");
+
+            Console.WriteLine("Abstract Factory with Ingredient \n");
+
+            PizzaStoreFromAF nyStore = new NYPizzaStoreFromAF();
+            PizzaFromAF pizzaAF = nyStore.OrderPizza("Cheese");
+
+
+            Console.WriteLine("Amy ordered a " + pizzaAF.Name + " \n");
+
 
 
         }

@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace FactoryPatternDemo.SimpleFactory.Store
 {
-    public class SimplePizzaFactory
+    public static class SimplePizzaFactory
     {
-        public Pizza CreatePizza(string type)
+        public static Pizza CreatePizza(string type)
         {
             Pizza pizza = null;
 
