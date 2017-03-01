@@ -1,4 +1,6 @@
-﻿using System;
+﻿using StrategyPatternDemo.Beheaviors;
+using StrategyPatternDemo.Characters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +12,10 @@ namespace StrategyPatternDemo
     {
         static void Main(string[] args)
         {
+            Character king = new King();
+            king.UseWeapon();
+            king.SetWeaponBehavior(new AxeBehavior());
+            king.UseWeapon();
         }
     }
 }

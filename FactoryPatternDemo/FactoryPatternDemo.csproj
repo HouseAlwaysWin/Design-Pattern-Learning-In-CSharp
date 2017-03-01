@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3366B72B-C5CD-4E8C-828D-1313841DFEF3}</ProjectGuid>
+    <ProjectGuid>{62E3296C-ABEF-44C3-9FFF-E8858F07CC95}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>StrategyPatternDemo</RootNamespace>
-    <AssemblyName>StrategyPatternDemo</AssemblyName>
+    <RootNamespace>FactoryPatternDemo</RootNamespace>
+    <AssemblyName>FactoryPatternDemo</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,18 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Beheaviors\AxeBehavior.cs" />
-    <Compile Include="Beheaviors\BowAndArrowBehavior.cs" />
-    <Compile Include="Beheaviors\KnifeBeheavior.cs" />
-    <Compile Include="Beheaviors\SwordBehavior.cs" />
-    <Compile Include="Beheaviors\Interface\IWeaponBehavior.cs" />
-    <Compile Include="Characters\Character.cs" />
-    <Compile Include="Characters\King.cs" />
-    <Compile Include="Characters\Knight.cs" />
-    <Compile Include="Characters\Queen.cs" />
-    <Compile Include="Characters\Troll.cs" />
+    <Compile Include="Factory\Stores\ChicagoPizzaStore.cs" />
+    <Compile Include="Factory\Stores\NYPizzaStore.cs" />
+    <Compile Include="Factory\Stores\PizzaStore.cs" />
+    <Compile Include="Factory\Products\ChicagoStyleCheesePizza.cs" />
+    <Compile Include="Factory\Products\NYStyleCheesePizza.cs" />
+    <Compile Include="Factory\Products\Pizza.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleFactory\Products\ClamPizza.cs" />
+    <Compile Include="SimpleFactory\Products\PepperoniPizza.cs" />
+    <Compile Include="SimpleFactory\Products\CheesePizza.cs" />
+    <Compile Include="SimpleFactory\Products\VeggiePizza.cs" />
+    <Compile Include="SimpleFactory\Stores\SimplePizzaStore.cs" />
+    <Compile Include="SimpleFactory\Stores\SimplePizzaFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
