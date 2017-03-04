@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace CommandPatternDemo.Romote.Concretes
 {
-    public abstract class CommandBase
+    public interface ICommand
     {
-        public abstract void Execute();
+        void Execute();
 
 
-        public abstract void Undo();
+        void Undo();
 
     }
 }

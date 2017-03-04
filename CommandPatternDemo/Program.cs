@@ -28,8 +28,9 @@ namespace CommandPatternDemo
             control.UndoButtonWasPushed();
 
 
-            Console.WriteLine("-------------Fan Control-----------------\n");
+            Console.WriteLine("\n-------------Fan Control-----------------\n");
 
+            //Start Initialize Fan Settings
             CeilingFan fan = new CeilingFan("My Room");
             CeilingFanCommand fanOff = new CeilingFanCommand(fan);
             CeilingFanCommand fanHigh = new CeilingFanCommand(fan);
@@ -43,6 +44,7 @@ namespace CommandPatternDemo
             control.SetCommand(1, fanHigh, fanOff);
             control.SetCommand(2, fanMedium, fanOff);
             control.SetCommand(3, fanLow, fanOff);
+            //End Fan Settings
 
             control.OnButtonWasPushed(1);
             control.OnButtonWasPushed(2);

@@ -23,25 +23,25 @@ namespace CommandPatternDemo.Furnitures
         public void High()
         {
             GetSpeed = HIGH;
-            Console.WriteLine(location + "Fan is in high speed");
+            Console.WriteLine(location + "'s Fan is in High speed");
         }
 
         public void Medium()
         {
             GetSpeed = MEDIUM;
-            Console.WriteLine(location + "Fan is in Medium speed");
+            Console.WriteLine(location + "'s Fan is in Medium speed");
         }
 
         public void Low()
         {
             GetSpeed = LOW;
-            Console.WriteLine(location + "Fan is in Low speed");
+            Console.WriteLine(location + "'s Fan is in Low speed");
         }
 
         public void Off()
         {
             GetSpeed = OFF;
-            Console.WriteLine(location + "Fan is in off now");
+            Console.WriteLine(location + "'s Fan is in Off now");
         }
 
 

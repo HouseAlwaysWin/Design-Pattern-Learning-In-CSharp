@@ -10,14 +10,14 @@ namespace CommandPatternDemo.Romote
 {
     public class SimpleRomoteControl
     {
-        CommandBase slot;
+        ICommand slot;
 
         public SimpleRomoteControl()
         {
 
         }
 
-        public void SetCommand(CommandBase command)
+        public void SetCommand(ICommand command)
         {
             this.slot = command;
         }

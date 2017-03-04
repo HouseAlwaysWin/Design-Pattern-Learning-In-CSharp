@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 
 namespace CommandPatternDemo.Romote.Concretes
 {
-    public class LightOffCommand : CommandBase
+    public class LightOffCommand : ICommand
     {
         Light light;
         public LightOffCommand(Light light)
         {
             this.light = light;
         }
-        public override void Execute()
+        public void Execute()
         {
             light.Off();
         }
 
-        public override void Undo()
+        public void Undo()
         {
             light.On();
         }

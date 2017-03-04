@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CommandPatternDemo.Romote.Concretes
 {
-    public class LightOnCommand : CommandBase
+    public class LightOnCommand : ICommand
     {
         Light light;
 
@@ -16,12 +16,12 @@ namespace CommandPatternDemo.Romote.Concretes
             this.light = light;
         }
 
-        public override void Execute()
+        public void Execute()
         {
             light.On();
         }
 
-        public override void Undo()
+        public void Undo()
         {
             light.Off();
         }

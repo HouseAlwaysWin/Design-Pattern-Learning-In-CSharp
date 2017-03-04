@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 
 namespace CommandPatternDemo.Romote.Concretes
 {
-    public class GarageDoorOpenCommand : CommandBase
+    public class GarageDoorOpenCommand : ICommand
     {
         GarageDoor door;
         public GarageDoorOpenCommand(GarageDoor door)
         {
             this.door = door;
         }
-        public override void Execute()
+        public void Execute()
         {
             door.Up();
         }
 
-        public override void Undo()
+        public void Undo()
         {
             door.Stop();
         }

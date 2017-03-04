@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace CommandPatternDemo.Romote.Concretes
 {
-    public class CeilingFanCommand : CommandBase
+    public class CeilingFanCommand : ICommand
     {
         CeilingFan fan;
-        int status;
+        int getStatus;
         int preserved;
         public CeilingFanCommand(CeilingFan fan)
         {
@@ -19,11 +19,22 @@ namespace CommandPatternDemo.Romote.Concretes
 
         public void SetFanStatus(int status)
         {
-            this.status = status;
+            this.getStatus = status;
         }
-        public override void Execute()
+
+        public void Execute()
         {
             preserved = fan.GetSpeed;
+            Status(getStatus);
+        }
+
+        public void Undo()
+        {
+            Status(preserved);
+        }
+
+        void Status(int status)
+        {
             if (status == CeilingFan.HIGH)
             {
                 fan.High();
@@ -37,26 +48,6 @@ namespace CommandPatternDemo.Romote.Concretes
                 fan.Low();
             }
             else if (status == CeilingFan.OFF)
-            {
-                fan.Off();
-            }
-        }
-
-        public override void Undo()
-        {
-            if (preserved == CeilingFan.HIGH)
-            {
-                fan.High();
-            }
-            else if (preserved == CeilingFan.MEDIUM)
-            {
-                fan.Medium();
-            }
-            else if (preserved == CeilingFan.LOW)
-            {
-                fan.Low();
-            }
-            else if (preserved == CeilingFan.OFF)
             {
                 fan.Off();
             }

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace CommandPatternDemo.Romote.Concretes
 {
-    public class NoCommand : CommandBase
+    public class NoCommand : ICommand
     {
-        public override void Execute()
+        public void Execute()
         {
             Console.WriteLine("No Responses");
         }
 
-        public override void Undo()
+        public void Undo()
         {
             Console.WriteLine("No Responses");
         }

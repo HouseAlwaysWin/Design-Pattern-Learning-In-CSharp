@@ -10,17 +10,18 @@ namespace CommandPatternDemo.Romote
 {
     public class RemoteControl
     {
-        CommandBase[] OnCommand;
-        CommandBase[] OffCommand;
-        CommandBase UndoCommand;
+        ICommand[] OnCommand;
+        ICommand[] OffCommand;
+        ICommand UndoCommand;
+
 
         public RemoteControl()
         {
-            OnCommand = new CommandBase[7];
-            OffCommand = new CommandBase[7];
+            OnCommand = new ICommand[7];
+            OffCommand = new ICommand[7];
 
 
-            CommandBase noCommand = new NoCommand();
+            ICommand noCommand = new NoCommand();
 
             // Fill in all with no command content
             for (int i = 0; i < 7; i++)
@@ -32,7 +33,7 @@ namespace CommandPatternDemo.Romote
             UndoCommand = noCommand;
         }
 
-        public void SetCommand(int slot, CommandBase onCommand, CommandBase offCommand)
+        public void SetCommand(int slot, ICommand onCommand, ICommand offCommand)
         {
             OnCommand[slot] = onCommand;
             OffCommand[slot] = offCommand;
