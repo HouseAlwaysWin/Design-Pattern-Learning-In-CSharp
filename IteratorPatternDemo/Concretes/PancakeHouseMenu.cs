@@ -15,6 +15,7 @@ namespace IteratorPatternDemo.Concretes
         {
             menuItems = new ArrayList();
 
+
             AddItem("K&B's Pancake Breakfast", "Pancakes with scrabmled eggs, and toast", true, 2.99);
             AddItem("Regular Pancake Breakfast", "Pancakes with fried eggs, and sausage", false, 2.99);
             AddItem("Blueberry Pancake Breakfast", "Pancakes with fresh blueberries", true, 3.49);

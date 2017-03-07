@@ -14,9 +14,11 @@ namespace IteratorPatternDemo.Concretes
         int numberOfItems = 0;
         MenuItem[] menuItems;
 
+
         public DinerMenu()
         {
             menuItems = new MenuItem[MAX_ITEMS];
+
 
             AddItem("Begetarian BLT", "(Fakin') Bacon with lettuce & tomato on whole wheat", true, 2.99);
             AddItem("BLT", "Bacon with lettuce & tomato on whole wheat", false, 2.99);
